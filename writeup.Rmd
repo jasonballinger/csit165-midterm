@@ -143,8 +143,8 @@ cat(paste("The region with the newest first case, ", cases[recentRow, "Province.
 # Objective 4: Calculate risk scores for different areas
 
 # Filter out areas with zero confirmations
-cases_filtered <- cases_filtered[cases_filtered$X1.22.20 > 0, ]
-deaths_filtered <- deaths_filtered[deaths_filtered$X1.22.20 > 0, ]
+cases_filtered <- cases[cases$X1.22.20 > 0, ]
+deaths_filtered <- deaths[deaths$X1.22.20 > 0, ]
 
 # Calculate risk scores
 risk_scores <- 100 * deaths_filtered$X1.22.20 / cases_filtered$X1.22.20
